@@ -10,7 +10,7 @@ public class Member {
 
 	private String name;
 	// private borrowedbBooks DONE: implement collection of borrowed books
-	List<Book> borrowedBooks = new ArrayList<>();
+	private List<Book> borrowedBooks = new ArrayList<>();
 	
 	// DONE: implement functionality of Member class
 	public Member(String name) {
@@ -28,6 +28,13 @@ public class Member {
 		}else {
 			return;
 		}	
+	}
+	public String toString() {
+		String str = "Member name: " + this.getName() + "\nBorrowed Books:\n";
+		for(Book b : borrowedBooks) {
+			str += b.toString();
+		}
+		return str;
 	}
 
 }

@@ -24,5 +24,8 @@ public class Book {
 	public void returnBook() {
 		this.isAvailable = true;
 	}
+	public String toString() {
+		return "\nTitle: " + this.title + "\nAvailable " + ((isAvailable)? "Yes\n" : "No\n"); 
+	}
 	
 }

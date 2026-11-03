@@ -28,5 +28,23 @@ public class Library {
 		catalog.add(b);
 	}
 	
+	public void removeBook(Book b) {
+		catalog.remove(b);
+	}
+	public void removeMember(Member m) {
+		members.remove(m);
+	}
+	
+	public Book getBook(Book b) {
+		return (catalog.contains(b))? catalog.get(catalog.indexOf(b)) : null;
+	}
+	
+	public String toString() {
+		String books = "";
+		for(Book b : catalog) {
+			books += b.toString();
+		}
+		return books;
+	}
 
 }
