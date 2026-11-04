@@ -6,8 +6,13 @@ public class LibrarianController {
 	// Handles user requests like borrowing and returning books.
 	// Delegates tasks to the appropriate objects.
 	
-	// TODO: implement functionality of Member class
+	// DONE: implement functionality of Member class
 	public Library library;
+	
+	public LibrarianController(Library l) {
+		this.library = l;
+	}
+	
 	public void addBookToCatalog(Book b) {
 		 this.library.addBook(b);
 	}

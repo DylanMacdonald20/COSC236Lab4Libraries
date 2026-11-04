@@ -39,6 +39,18 @@ public class Library {
 		return (catalog.contains(b))? catalog.get(catalog.indexOf(b)) : null;
 	}
 	
+	public Member getMember(Member m) {
+		return (members.contains(m))? members.get(members.indexOf(m)) : null;
+	}
+	
+	public List<Book> getCatalog() {
+		return catalog;
+	}
+	
+	public List<Member> getMemberList() {
+		return members;
+	}
+	
 	public String toString() {
 		String books = "";
 		for(Book b : catalog) {
